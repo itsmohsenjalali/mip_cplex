@@ -5,27 +5,6 @@ node_data, link_data, demand_data = read_data_from_file()
 graph = get_data_dict(node_data, link_data, demand_data)
 graph['B']['N11'] = 10
 graph['B']['N15'] = -10
-# Define the graph as a dictionary of nodes and edges
-# graph = {
-#     'nodes': ['A', 'B', 'C', 'D'],
-#     'edges': [
-#         ('A', 'B', 2,3),
-#         ('A', 'C', 3,40),
-#         ('B', 'A', 2,3),
-#         ('B', 'C', 1,5),
-#         ('B', 'D', 4,1),
-#         ('D', 'B', 4,1),
-#         ('C', 'D', 2,2),
-#         ('C', 'A', 3,40),
-#         ('C', 'B', 1,5),
-#     ],
-#     'B': {
-#         'A':10,
-#         'B': 0,
-#         'C': -10,
-#         'D': 0
-#     }
-# }
 
 # Create a docplex model
 model = Model('GraphModel')
